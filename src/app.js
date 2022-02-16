@@ -1,29 +1,23 @@
-import { Button, Typography, AppBar, Toolbar, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import '@fontsource/roboto/700.css';
 
-import { ThemeProvider } from "@mui/material/styles";
-
-import theme from "./theme";
-
-
+import Grid from '@mui/material/Grid';
+import Header from "./Header"
+import { makeStyles } from "@mui/styles"
 
 const App = () => {
+  
     return (
-
-  <ThemeProvider theme={theme}>
-    <AppBar position="static" color="inherit">
-      <Toolbar variant="dense" >
-        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-        <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" color="inherit" component="div">
-        Photos
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  </ThemeProvider>
-
+      <Grid container direction="column">
+        <Grid item>
+            <Header/>
+        </Grid>
+        <Grid item container>
+            <Grid item xs={0} lg={2}/>
+            <Grid item xs={12} lg={8}>Content Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello WorldContent Hello World</Grid>
+            <Grid item xs={0} lg={2}/>
+        </Grid>
+        
+      </Grid>
+  
     )
 }
 
